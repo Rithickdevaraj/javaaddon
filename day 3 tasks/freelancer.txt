@@ -1,0 +1,23 @@
+class Freelancer {
+    String name;
+    int hoursWorked;
+    double hourlyRate;
+    double bonus;
+
+    public Freelancer(String name, int hoursWorked, double hourlyRate, double bonus) {
+        this.name = name;
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+        this.bonus = bonus;
+    }
+
+    public void displaySalary() {
+        double salary = (hoursWorked * hourlyRate) + bonus;
+        System.out.println(name + " (Freelancer) earns: ₹" + salary);
+    }
+
+    public static void main(String[] args) {
+        Freelancer emp3 = new Freelancer("Amit", 30, 300, 2000);
+        emp3.displaySalary();
+    }
+}
